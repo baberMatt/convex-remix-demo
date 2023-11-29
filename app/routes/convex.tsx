@@ -13,13 +13,13 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
   return json({ tasks })
 }
 
-const task = () => {
+const Convex = () => {
   const { tasks } = useLoaderData<any>();
 
   console.log(tasks)
   return (
     <div className='flex flex-col text-center w-screen h-screen justify-center items-center'>
-      <h1 className='font-bold text-2xl'>Tasks</h1>
+      <h1 className='font-bold text-2xl'>Convex</h1>
       <ul>
         {tasks.map((task: any) => (
           <li key={task.id}>{task.text}</li>
@@ -30,4 +30,4 @@ const task = () => {
   )
 }
 
-export default task
+export default Convex
