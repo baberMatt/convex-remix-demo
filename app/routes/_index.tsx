@@ -15,8 +15,7 @@ export default function Index() {
       <h2 className="font-bold text-2xl mt-12">Expected results</h2>
       <ul className="w-1/3 text-lg">
         <li><strong>Fetch:</strong> Loader function runs and parse request succesfully, sends it to the client and users map</li>
-        <li className="mt-2"><strong>Convex:</strong> Loader function runs and initialize 
-        <a className="font-bold text-indigo-800" href="https://github.com/get-convex/convex-js/blob/32ff1dc1190e35223bda44c41f51a237960da3e0/src/browser/http_client.ts#L26">Convex HTTP Client</a>, 
+        <li className="mt-2"><strong>Convex:</strong> Loader function runs and initialize <a className="font-bold text-indigo-800" href="https://github.com/get-convex/convex-js/blob/32ff1dc1190e35223bda44c41f51a237960da3e0/src/browser/http_client.ts#L26">Convex HTTP Client</a>, 
         client makes successful query which should appear in server logs. Unknown error is thrown which the catch misses. Server logs the following error
         </li>
 
