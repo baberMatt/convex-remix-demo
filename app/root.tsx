@@ -28,7 +28,8 @@ export default function App() {
         <div>
         <div className="w-full h-[5vh] flex justify-end items-center bg-indigo-900 fixed top-0 left-0 gap-4 px-12">
           <Link to="/" className="text-white text-2xl font-bold text-center">Home</Link>
-          <Link to="/task" className="text-white text-2xl font-bold text-center">Task</Link>
+          <Link to="/convex" className="text-white text-2xl font-bold text-center">Convex</Link>
+          <Link to="/fetch" className="text-white text-2xl font-bold text-center">Fetch</Link>
         </div>
         <Outlet />
         </div>
