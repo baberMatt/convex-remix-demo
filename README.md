@@ -1,38 +1,55 @@
-# Welcome to Remix!
+## Convex Remix Demo
 
-- [Remix Docs](https://remix.run/docs)
 
-## Development
+#### Local
+---
 
-From your terminal:
+- Install dependencies
+```sh
+npm install
+```
 
+- Log into [convex](https://dashboard.convex.dev/) 
+
+- Init convex project
+```sh
+npx convex dev
+```
+
+- Seed
+```sh
+npx convex import tasks sampleData.jsonl
+```
+
+- Create .env and copy CONVEX_URL from .env.local 
+
+- Run
 ```sh
 npm run dev
 ```
 
-This starts your app in development mode, rebuilding assets on file changes.
+&nbsp;
 
-## Deployment
+#### Prod
+---
 
-First, build your app for production:
-
+- deploy convex to prod
 ```sh
-npm run build
+npx convex deploy
 ```
 
-Then run the app in production mode:
+- Go to convex project dashboard, tab to prod, go to data and create `tasks` table, copy in task data from dev
 
-```sh
-npm start
-```
+- Go to vercel and configure new project
+    - override build commamd  
+    ```sh 
+    npx convex deploy --cmd 'remix build'
+    ```
+    - Set CONVEX_URL envvar to prod url produce when you deployed
 
-Now you'll need to pick a host to deploy it to.
+&nbsp;
 
-### DIY
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
+### Test Notes:
+---
+- Expect to see tasks on local, but not on a vercel deployment
+- Error doesn't get caught server side, remix ErrorBoundary handles client
